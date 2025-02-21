@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\BukuController;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BukuController; // Mengimpor class BukuController agar bisa digunakan dalam route
+use Illuminate\Support\Facades\Route; // Mengimpor class Route untuk mendefinisikan route
 
 /*
 |--------------------------------------------------------------------------
@@ -14,8 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', function () { // Mendefinisikan route untuk path '/' (halaman utama)
+    return view('welcome'); // Mengembalikan view 'welcome' (biasanya file blade.php di folder resources/views)
 });
 
-Route::resource('bukus', BukuController::class);
+Route::resource('bukus', BukuController::class); // Mendefinisikan route resource untuk resource 'bukus' dan dihubungkan ke BukuController
